@@ -248,20 +248,7 @@
                     </tr>
                   </tfoot>
                   <tbody>
-                    <tr>
-                      <td>CBJ-1998</td>
-                      <td>Suzuki</td>
-                      <td>Swift</td>
-                      <td>2020</td>
-                      <td>2020/09/01</td>
-                      <td>Luxury</td>
-                      <td>2500.00</td>
-                      <td>15000.00</td>
-                      <td>50000.00</td>
-                      <td>30.00</td>
-                      <td>3500.00</td>
-                      <td>45.00</td>
-                    </tr>
+                    <jsp:include page="/ViewVehicleServlet" />
                   </tbody>
                 </table>
               </div>
