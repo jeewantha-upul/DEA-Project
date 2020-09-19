@@ -212,45 +212,54 @@
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
                                 <h6 class="m-0 font-weight-bold text-primary">Fill in the VIN to Update a Vehicle</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Keep Blank if you don't wish to change some fields!</h6>
                             </div>
                             <div class="card-body">
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Vehicle Identification Number</label>
-                                        <input class="form-control" id="exampleFormControlInput1" type="text">
+                                <form method="POST" action="${pageContext.request.contextPath}/UpdateDeleteVehicleServlet">
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Vehicle Identification Number</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="vin">
+                                        </div>
                                     </div>
-                                </div>
-                                <form>
+                                    <hr>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Make</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="make">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Model</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="model">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Year or Registration</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="yor">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Vehicle Identification Number</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="vin1">
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">In Service from</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="date">
+                                            <input class="form-control" id="exampleFormControlInput1" type="date" name="serve_from">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Category</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                <option>Select Category</option>
-                                                <option>General</option>
-                                                <option>Premium</option>
-                                                <option>Luxury</option>
+                                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                                                <option value="null">None</option>
+                                                <option value="General">General</option>
+                                                <option value="Premium">Premium</option>
+                                                <option value="Luxury">Luxury</option>
                                             </select>
                                         </div>
                                     </div>
@@ -260,21 +269,21 @@
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Rate Per Day</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="rate_per_day_wod">
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Rate Per Week</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="rate_per_week_wod">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Rate Per Month</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="rate_per_month_wod">
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Excess Mileage Over 80km Per Day</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="excess_mileage_wod">
                                         </div>
                                     </div>
                                     <hr>
@@ -283,20 +292,20 @@
                                     <div class="form-group row">
                                         <div class="col-sm-6">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Rate Per Day</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="rate_per_day_wd">
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Excess Mileage Over 80km Per Day</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="excess_mileage_wd">
                                         </div>
                                     </div>
                                     <hr>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="submit" class="btn btn-success btn-user btn-block" value="Update Entry"> 
+                                            <input type="submit" class="btn btn-success btn-user btn-block" name="action" value="Update"> 
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="submit" class="btn btn-danger btn-user btn-block" value="Delete Entry"> 
+                                            <input type="submit" class="btn btn-danger btn-user btn-block" name="action" value="Delete"> 
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -305,7 +314,6 @@
                                         </div> 
                                     </div>                  
                                 </form>
-
                             </div>
                         </div>
 
@@ -343,13 +351,13 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
+                            <span aria-hidden="true">Ã</span>
                         </button>
                     </div>
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
+                        <a class="btn btn-primary" href="${pageContext.request.contextPath}">Logout</a>
                     </div>
                 </div>
             </div>

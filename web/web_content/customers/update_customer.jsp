@@ -212,6 +212,7 @@
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
                                 <h6 class="m-0 font-weight-bold text-primary">Fill in the NIC to Search and Update a Customer</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Keep Blank if you don't wish to change some fields!</h6>
                             </div>
                             <div class="card-body">
                                 <form method="POST" action="${pageContext.request.contextPath}/UpdateDeleteCustomerServlet">
@@ -244,12 +245,20 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <hr>
+                                    <hr>
                                     <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">NIC Number</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="nic1">
+                                        </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Driving License Number</label>
                                             <input class="form-control" id="exampleFormControlInput1" type="text" name="dl_no">
                                         </div>
                                     </div>
+                                    <hr>
+                                    <hr>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Phone Number</label>

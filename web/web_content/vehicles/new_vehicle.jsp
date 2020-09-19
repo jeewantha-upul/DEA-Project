@@ -30,7 +30,7 @@
             <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
                 <!-- Sidebar - Brand -->
-                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="${pageContext.request.contextPath}/web_content/dashboard.jsp">
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
                     <div class="sidebar-brand-icon rotate-n-15">
                         <i class="fas fa-car"></i>
                     </div>
@@ -99,7 +99,7 @@
                             <h6 class="collapse-header">Options:</h6>
                             <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/drivers/new_driver.jsp">Add New Driver</a>
                             <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/drivers/view_driver.jsp">View Driver</a>
-                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/drivers/update_driver.jsp">Update Driver</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/dricers/update_driver.jsp">Update Driver</a>
                         </div>
                     </div>
                 </li>
@@ -167,7 +167,7 @@
                             <i class="fa fa-bars"></i>
                         </button>
 
-                        <h1 class="h1 mb-2 text-gray-900"><a href="${pageContext.request.contextPath}/web_content/dashboard.jsp"><u>Car Rental Management System</u></a></h1>
+                        <h1 class="h1 mb-2 text-gray-900"><a href="dashboard.html"><u>Car Rental Management System</u></a></h1>
 
                         <!-- Topbar Navbar -->
                         <ul class="navbar-nav ml-auto">
@@ -215,43 +215,43 @@
                             </div>
                             <div class="card-body">
 
-                                <form>
+                                <form method="POST" action="${pageContext.request.contextPath}/AddVehicleServlet">
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Make</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="make">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Model</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="model">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Year or Registration</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="yor">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Vehicle Identification Number</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="vin">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">In Service from</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="date">
+                                            <input class="form-control" id="exampleFormControlInput1" type="date" name="serv_from">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Category</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                <option>Select Category</option>
-                                                <option>General</option>
-                                                <option>Premium</option>
-                                                <option>Luxury</option>
+                                            <select class="form-control" id="exampleFormControlSelect1" name="category">
+                                                <option value="select">Select Category</option>
+                                                <option value="general">General</option>
+                                                <option value="premium">Premium</option>
+                                                <option value="luxury">Luxury</option>
                                             </select>
                                         </div>
                                     </div>
@@ -261,21 +261,21 @@
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Rate Per Day</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="rate_per_day_wod">
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Rate Per Week</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="rate_per_week_wod">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Rate Per Month</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="rate_per_month_wod">
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Excess Mileage Over 80km Per Day</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="excess_milage_wod">
                                         </div>
                                     </div>
                                     <hr>
@@ -284,11 +284,11 @@
                                     <div class="form-group row">
                                         <div class="col-sm-6">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Rate Per Day</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="rate_per_day_wd">
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Excess Mileage Over 80km Per Day</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="excess_milage_wd">
                                         </div>
                                     </div>
                                     <hr>
@@ -339,7 +339,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
+                            <span aria-hidden="true">Ã</span>
                         </button>
                     </div>
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>

@@ -47,6 +47,7 @@ public class UpdateDeleteDriverServlet extends HttpServlet {
                 String new_gender = request.getParameter("gender");
                 String new_phone_no = request.getParameter("phone_no");
                 String new_email = request.getParameter("email");
+                String new_dl_no = request.getParameter("dl_no1");
                 String new_nic = request.getParameter("nic");
                 String new_dob = request.getParameter("dob");
                 String new_address = request.getParameter("address");
@@ -70,6 +71,9 @@ public class UpdateDeleteDriverServlet extends HttpServlet {
                 }
                 if (new_nic != null && !new_nic.isEmpty()) {
                     driver.setNic(new_nic);
+                }
+                if(new_dl_no!= null && !new_dl_no.isEmpty()){
+                    driver.setDl_no(new_dl_no);
                 }
                 if (new_dob != null && !new_dob.isEmpty()) {
                     driver.setDob(new_dob);

@@ -47,6 +47,7 @@ public class UpdateDeleteCustomerServlet extends HttpServlet {
                 String new_gender = request.getParameter("gender");
                 String new_phone_no = request.getParameter("phone_no");
                 String new_email = request.getParameter("email");
+                String new_nic = request.getParameter("nic1");
                 String new_dl_no = request.getParameter("dl_no");
                 String new_dob = request.getParameter("dob");
                 String new_address = request.getParameter("address");
@@ -67,6 +68,9 @@ public class UpdateDeleteCustomerServlet extends HttpServlet {
                 }
                 if (new_email != null && !new_email.isEmpty()) {
                     customer.setEmail(new_email);
+                }
+                if (new_nic != null && !new_nic.isEmpty()) {
+                    customer.setNic(new_nic);
                 }
                 if (new_dl_no != null && !new_dl_no.isEmpty()) {
                     customer.setDl_no(new_dl_no);

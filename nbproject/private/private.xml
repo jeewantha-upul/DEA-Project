@@ -3,8 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Web%20Application%20Development/DEA-Project/web/web_content/users/view_user.jsp</file>
-            <file>file:/D:/Web%20Application%20Development/DEA-Project/web/web_content/drivers/new_driver.jsp</file>
+            <file>file:/D:/Web%20Application%20Development/Sudasun/DEA-Project/src/java/vrms/customer/servlets/UpdateDeleteCustomerServlet.java</file>
+            <file>file:/D:/Web%20Application%20Development/Sudasun/DEA-Project/web/web_content/drivers/update_driver.jsp</file>
+            <file>file:/D:/Web%20Application%20Development/Sudasun/DEA-Project/web/web_content/customers/update_customer.jsp</file>
+            <file>file:/D:/Web%20Application%20Development/Sudasun/DEA-Project/src/java/vrms/customer/classes/CustomerDAO.java</file>
+            <file>file:/D:/Web%20Application%20Development/Sudasun/DEA-Project/web/web_content/vehicles/update_vehicle.jsp</file>
         </group>
     </open-files>
 </project-private>
