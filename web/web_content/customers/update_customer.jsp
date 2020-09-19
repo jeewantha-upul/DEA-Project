@@ -212,6 +212,7 @@
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
                                 <h6 class="m-0 font-weight-bold text-primary">Fill in the NIC to Search and Update a Customer</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Keep Blank if you don't wish to change some fields!</h6>
                             </div>
                             <div class="card-body">
                                 <form method="POST" action="${pageContext.request.contextPath}/UpdateDeleteCustomerServlet">
