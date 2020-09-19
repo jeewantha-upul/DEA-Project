@@ -244,12 +244,20 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <hr>
+                                    <hr>
                                     <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">NIC Number</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="nic1">
+                                        </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Driving License Number</label>
                                             <input class="form-control" id="exampleFormControlInput1" type="text" name="dl_no">
                                         </div>
                                     </div>
+                                    <hr>
+                                    <hr>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Phone Number</label>
