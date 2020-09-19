@@ -52,6 +52,14 @@
         <servlet-name>AddCustomerServlet</servlet-name>
         <servlet-class>vrms.customer.servlets.AddCustomerServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewCustomerServlet</servlet-name>
+        <servlet-class>vrms.customer.servlets.ViewCustomerServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateDeleteCustomerServlet</servlet-name>
+        <servlet-class>vrms.customer.servlets.UpdateDeleteCustomerServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -104,11 +112,20 @@
         <servlet-name>AddCustomerServlet</servlet-name>
         <url-pattern>/AddCustomerServlet</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewCustomerServlet</servlet-name>
+        <url-pattern>/ViewCustomerServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateDeleteCustomerServlet</servlet-name>
+        <url-pattern>/UpdateDeleteCustomerServlet</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+    
     <error-page>
         <exception-type>java.lang.Throwable</exception-type>
         <location>/404.jsp</location>
@@ -117,4 +134,5 @@
         <error-code>404</error-code>
         <location>/404.jsp</location>
     </error-page>
+    
 </web-app>

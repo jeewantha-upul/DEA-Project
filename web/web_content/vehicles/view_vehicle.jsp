@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Create New Invoice</title>
+        <title>View Vehicle</title>
 
         <!-- Custom fonts for this template-->
         <link href="${pageContext.request.contextPath}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -51,7 +51,7 @@
                 <hr class="sidebar-divider">
 
                 <!-- Nav Item - Pages Collapse Menu -->
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInvoice" aria-expanded="true" aria-controls="collapseInvoice">
                         <i class="fas fa-fw fa-file"></i>
                         <span>Invoice</span>
@@ -108,7 +108,7 @@
                 <hr class="sidebar-divider">
 
                 <!-- Nav Item - Pages Collapse Menu -->
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseVehicles" aria-expanded="true" aria-controls="collapseVehicles">
                         <i class="fas fa-fw fa-car"></i>
                         <span>Vehicles</span>
@@ -167,7 +167,7 @@
                             <i class="fa fa-bars"></i>
                         </button>
 
-                        <h1 class="h1 mb-2 text-gray-900"><a href="${pageContext.request.contextPath}/web_content/dashboard.jsp"><u>Car Rental Management System</u></a></h1>
+                        <h1 class="h1 mb-2 text-gray-900"><a href="${pageContext.request.contextPath}/web_content/dashboard.jsp"><u>Vehicle Rental Management System</u></a></h1>
 
                         <!-- Topbar Navbar -->
                         <ul class="navbar-nav ml-auto">
@@ -206,115 +206,66 @@
                     <div class="container-fluid">
 
                         <!-- Page Heading -->
-                        <h1 class="h3 mb-4 text-gray-700">Create New Invoice</h1>
+                        <h1 class="h3 mb-4 text-gray-700">View Vehicle</h1>
 
-                        <!-- Basic Card Example -->
+                        <!-- DataTales Example -->
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Fill in the Form to Create a New Invoice</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Vehicles</h6>
                             </div>
                             <div class="card-body">
-
-                                <form method="GET" action="${pageContext.request.contextPath}/SearchCustomerServlet">
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Customer NIC Number</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="nic">
-                                        </div>
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label class="m-0 font-weight-bold text-success">Customer Availability:</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text" disabled value="<%=request.getAttribute("customer_name")%>">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="submit" class="btn btn-success btn-user btn-block" value="Search"> 
-                                        </div>
-                                    </div>
-                                </form>
-                                <hr><hr>
-                                <form>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Date</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="date">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Category</label>
-                                            <jsp:include page="/ViewCategoryServlet" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Make</label>
-                                            <jsp:include page="/ViewMakeServlet" />
-                                        </div>
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Model</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                <option>Select Model</option>
-                                                <option>Premio</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Reserved Until</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="date">
-                                        </div>
-                                    </div>
-                                    <hr><hr>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">With / Without Driver</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                <option>Without Driver</option>
-                                                <option>Santa Rajapaksha</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Fee</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Starting Mileage</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">End Mileage</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Total</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Payments</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                <option>Yet To Pay</option>
-                                                <option>Paid</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="submit" class="btn btn-primary btn-user btn-block" value="Submit Entry"> 
-                                        </div>
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="reset" class="btn btn-info btn-user btn-block" value="Clear Form"> 
-                                        </div>
-                                    </div>
-                                </form>
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="50%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>VIN</th>
+                                                <th>Make</th>
+                                                <th>Model</th>
+                                                <th>YOR</th>
+                                                <th>In Service From</th>
+                                                <th>Category</th>
+                                                <th>Rate Per Day</th>
+                                                <th>Rate Per Week</th>
+                                                <th>Rate Per Month</th>
+                                                <th>Excess Mileage Over 80km Rate Per Day</th>
+                                                <th>Rate Per Day (WD)</th>
+                                                <th>Excess Mileage Over 80km Rate Per Day (WD)</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>VIN</th>
+                                                <th>Make</th>
+                                                <th>Model</th>
+                                                <th>YOR</th>
+                                                <th>In Service From</th>
+                                                <th>Category</th>
+                                                <th>Rate Per Day</th>
+                                                <th>Rate Per Week</th>
+                                                <th>Rate Per Month</th>
+                                                <th>Excess Mileage Over 80km Rate Per Day</th>
+                                                <th>Rate Per Day (WD)</th>
+                                                <th>Excess Mileage Over 80km Rate Per Day (WD)</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <tr>
+                                                <td>CBJ-1998</td>
+                                                <td>Suzuki</td>
+                                                <td>Swift</td>
+                                                <td>2020</td>
+                                                <td>2020/09/01</td>
+                                                <td>Luxury</td>
+                                                <td>2500.00</td>
+                                                <td>15000.00</td>
+                                                <td>50000.00</td>
+                                                <td>30.00</td>
+                                                <td>3500.00</td>
+                                                <td>45.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
 
@@ -352,13 +303,13 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">Ã</span>
+                            <span aria-hidden="true">×</span>
                         </button>
                     </div>
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="${pageContext.request.contextPath}/LogOutServlet">Logout</a>
+                        <a class="btn btn-primary" href="login.html">Logout</a>
                     </div>
                 </div>
             </div>

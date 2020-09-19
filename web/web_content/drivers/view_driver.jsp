@@ -243,9 +243,7 @@
                                             </tr>
                                         </tfoot>
                                         <tbody>
-                                        <tbody>
                                             <jsp:include page="/ViewDriverServlet" />
-                                        </tbody>
                                         </tbody>
                                     </table>
                                 </div>

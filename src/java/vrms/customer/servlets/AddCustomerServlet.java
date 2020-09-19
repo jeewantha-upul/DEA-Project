@@ -16,7 +16,7 @@ import vrms.customer.classes.CustomerDAO;
 
 /**
  *
- * @author Kavinda
+ * @author LENOVO
  */
 public class AddCustomerServlet extends HttpServlet {
 
