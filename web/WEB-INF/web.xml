@@ -60,6 +60,10 @@
         <servlet-name>UpdateDeleteCustomerServlet</servlet-name>
         <servlet-class>vrms.customer.servlets.UpdateDeleteCustomerServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddVehicleServlet</servlet-name>
+        <servlet-class>vrms.vehicle.servlets.AddVehicleServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -120,12 +124,15 @@
         <servlet-name>UpdateDeleteCustomerServlet</servlet-name>
         <url-pattern>/UpdateDeleteCustomerServlet</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddVehicleServlet</servlet-name>
+        <url-pattern>/AddVehicleServlet</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-    
     <error-page>
         <exception-type>java.lang.Throwable</exception-type>
         <location>/404.jsp</location>
@@ -134,5 +141,4 @@
         <error-code>404</error-code>
         <location>/404.jsp</location>
     </error-page>
-    
 </web-app>
