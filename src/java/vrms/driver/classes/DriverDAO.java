@@ -84,16 +84,17 @@ public class DriverDAO {
             String url = "jdbc:mysql://localhost:3306/vrms_db";
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, "root", "");
-            PreparedStatement ps = con.prepareStatement("UPDATE driver SET first_name=?, last_name=?, gender=?, phone_no=?, email=?, nic=?, dob=?, address=? WHERE dl_no=?");
+            PreparedStatement ps = con.prepareStatement("UPDATE driver SET first_name=?, last_name=?, gender=?, phone_no=?, email=?, nic=?, dl_no=?, dob=?, address=? WHERE dl_no=?");
             ps.setString(1, driver.getFirst_name());
             ps.setString(2, driver.getLast_name());
             ps.setString(3, driver.getGender());
             ps.setString(4, driver.getPhone_no());
             ps.setString(5, driver.getEmail());
             ps.setString(6, driver.getNic());
-            ps.setString(7, driver.getDob());
-            ps.setString(8, driver.getAddress());
-            ps.setString(9, dl_no);
+            ps.setString(7, driver.getDl_no());
+            ps.setString(8, driver.getDob());
+            ps.setString(9, driver.getAddress());
+            ps.setString(10, dl_no);
             int rs = ps.executeUpdate();
             if (rs == 1) {
                 result = 1;

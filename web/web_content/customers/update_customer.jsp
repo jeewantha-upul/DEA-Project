@@ -212,73 +212,81 @@
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
                                 <h6 class="m-0 font-weight-bold text-primary">Fill in the NIC to Search and Update a Customer</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Keep Blank if you don't wish to change some fields!</h6>
                             </div>
                             <div class="card-body">
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">NIC Number</label>
-                                        <input class="form-control" id="exampleFormControlInput1" type="text">
+                                <form method="POST" action="${pageContext.request.contextPath}/UpdateDeleteCustomerServlet">
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">NIC Number</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="nic">
+                                        </div>
                                     </div>
-                                </div>
-                                <form>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">First Name</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="first_name">
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Last Name</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="last_name">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Gender</label>
                                             <div class="custom-control custom-radio">
-                                                <input class="custom-control-input" id="customRadio1" type="radio" name="customRadio">
+                                                <input class="custom-control-input" id="customRadio1" type="radio" name="gender" value="Male">
                                                 <label class="custom-control-label" for="customRadio1">Male</label>
                                             </div>
                                             <div class="custom-control custom-radio">
-                                                <input class="custom-control-input" id="customRadio2" type="radio" name="customRadio">
+                                                <input class="custom-control-input" id="customRadio2" type="radio" name="gender" value="Female">
                                                 <label class="custom-control-label" for="customRadio2">Female</label>
                                             </div>
                                         </div>
                                     </div>
+                                    <hr>
+                                    <hr>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">NIC Number</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="nic1">
+                                        </div>
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Driving License Number</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="dl_no">
                                         </div>
                                     </div>
+                                    <hr>
+                                    <hr>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Phone Number</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="phone_no">
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Email Address</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="email">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Date of Birth</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="date">
+                                            <input class="form-control" id="exampleFormControlInput1" type="date" name="dob">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlTextarea1" class="m-0 font-weight-bold text-primary">Address</label>
-                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">
-                                            </textarea>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="address">
                                         </div>
                                     </div>  
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="submit" class="btn btn-success btn-user btn-block" value="Update Entry"> 
+                                            <input type="submit" class="btn btn-success btn-user btn-block" name="action" value="Update"> 
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="submit" class="btn btn-danger btn-user btn-block" value="Delete Entry"> 
+                                            <input type="submit" class="btn btn-danger btn-user btn-block" name="action" value="Delete"> 
                                         </div>
                                     </div>
                                     <div class="form-group row">

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vrms.driver.servlets;
+package vrms.customer.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,31 +11,31 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import vrms.driver.classes.DriverBean;
-import vrms.driver.classes.DriverDAO;
+import vrms.customer.classes.CustomerBean;
+import vrms.customer.classes.CustomerDAO;
 
 /**
  *
- * @author PAVANI
+ * @author LENOVO
  */
-public class UpdateDeleteDriverServlet extends HttpServlet {
+public class UpdateDeleteCustomerServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
         String action = request.getParameter("action");
-        String dl_no = request.getParameter("dl_no");
-        DriverDAO dao = new DriverDAO();
-        DriverBean driver = new DriverBean();
+        String nic = request.getParameter("nic");
+        CustomerDAO dao = new CustomerDAO();
+        CustomerBean customer = new CustomerBean();
         PrintWriter out = response.getWriter();
 
-        if (dl_no.equals("") || dl_no.equals("null")) {
+        if (nic.equals("") || nic.equals("null")) {
 
             response.setContentType("text/html");
             out.println("<script type=\"text/javascript\">");
-            out.println("window.alert('Driver License Number can not be empty!');");
-            out.println("location='web_content/drivers/update_driver.jsp';");
+            out.println("window.alert('NIC can not be empty!');");
+            out.println("location='web_content/customers/update_customer.jsp';");
             out.println("</script>");
 
         } else {
@@ -47,72 +47,72 @@ public class UpdateDeleteDriverServlet extends HttpServlet {
                 String new_gender = request.getParameter("gender");
                 String new_phone_no = request.getParameter("phone_no");
                 String new_email = request.getParameter("email");
-                String new_dl_no = request.getParameter("dl_no1");
-                String new_nic = request.getParameter("nic");
+                String new_nic = request.getParameter("nic1");
+                String new_dl_no = request.getParameter("dl_no");
                 String new_dob = request.getParameter("dob");
                 String new_address = request.getParameter("address");
 
-                dao.viewSpecific(driver, dl_no);
+                dao.viewSpecific(customer, nic);
 
                 if (new_first_name != null && !new_first_name.isEmpty()) {
-                    driver.setFirst_name(new_first_name);
+                    customer.setFirst_name(new_first_name);
                 }
                 if (new_last_name != null && !new_last_name.isEmpty()) {
-                    driver.setLast_name(new_last_name);
+                    customer.setLast_name(new_last_name);
                 }
                 if (new_gender != null && !new_gender.isEmpty()) {
-                    driver.setGender(new_gender);
+                    customer.setGender(new_gender);
                 }
                 if (new_phone_no != null && !new_phone_no.isEmpty()) {
-                    driver.setPhone_no(new_phone_no);
+                    customer.setPhone_no(new_phone_no);
                 }
                 if (new_email != null && !new_email.isEmpty()) {
-                    driver.setEmail(new_email);
+                    customer.setEmail(new_email);
                 }
                 if (new_nic != null && !new_nic.isEmpty()) {
-                    driver.setNic(new_nic);
+                    customer.setNic(new_nic);
                 }
-                if(new_dl_no!= null && !new_dl_no.isEmpty()){
-                    driver.setDl_no(new_dl_no);
+                if (new_dl_no != null && !new_dl_no.isEmpty()) {
+                    customer.setDl_no(new_dl_no);
                 }
                 if (new_dob != null && !new_dob.isEmpty()) {
-                    driver.setDob(new_dob);
+                    customer.setDl_no(new_dob);
                 }
                 if (new_address != null && !new_address.isEmpty()) {
-                    driver.setAddress(new_address);
-                }
+                    customer.setAddress(new_address);
+                }  
 
-                if (dao.update(driver, dl_no) != 0) {
+                if (dao.update(customer, nic) != 0) {
 
                     response.setContentType("text/html");
                     out.println("<script type=\"text/javascript\">");
-                    out.println("window.alert('Driver Updated Successfully!');");
-                    out.println("location='web_content/drivers/update_driver.jsp';");
+                    out.println("window.alert('Customer Updated Successfully!');");
+                    out.println("location='web_content/customers/update_customer.jsp';");
                     out.println("</script>");
 
                 } else {
                     response.setContentType("text/html");
                     out.println("<script type=\"text/javascript\">");
-                    out.println("window.alert('User could not be Updated! Try Again!');");
-                    out.println("location='web_content/drivers/update_driver.jsp';");
+                    out.println("window.alert('Customer could not be Updated! Try Again!');");
+                    out.println("location='web_content/customers/update_customer.jsp';");
                     out.println("</script>");
                 }
 
             } else if (action.equals("Delete")) {
 
-                if (dao.delete(dl_no) != 0) {
+                if (dao.delete(nic) != 0) {
 
                     response.setContentType("text/html");
                     out.println("<script type=\"text/javascript\">");
-                    out.println("window.alert('Driver Deleted Successfully!');");
-                    out.println("location='web_content/drivers/update_driver.jsp';");
+                    out.println("window.alert('User Deleted Successfully!');");
+                    out.println("location='web_content/customers/update_customer.jsp';");
                     out.println("</script>");
 
                 } else {
                     response.setContentType("text/html");
                     out.println("<script type=\"text/javascript\">");
                     out.println("window.alert('Something went wrong! Please Try Again!');");
-                    out.println("location='web_content/drivers/update_driver.jsp';");
+                    out.println("location='web_content/users/update_customer.jsp';");
                     out.println("</script>");
                 }
 

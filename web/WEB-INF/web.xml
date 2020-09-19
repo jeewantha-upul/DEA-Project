@@ -52,6 +52,26 @@
         <servlet-name>AddCustomerServlet</servlet-name>
         <servlet-class>vrms.customer.servlets.AddCustomerServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewCustomerServlet</servlet-name>
+        <servlet-class>vrms.customer.servlets.ViewCustomerServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateDeleteCustomerServlet</servlet-name>
+        <servlet-class>vrms.customer.servlets.UpdateDeleteCustomerServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddVehicleServlet</servlet-name>
+        <servlet-class>vrms.vehicle.servlets.AddVehicleServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ViewVehicleServlet</servlet-name>
+        <servlet-class>vrms.vehicle.servlets.ViewVehicleServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateDeleteVehicleServlet</servlet-name>
+        <servlet-class>vrms.vehicle.servlets.UpdateDeleteVehicleServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -103,6 +123,26 @@
     <servlet-mapping>
         <servlet-name>AddCustomerServlet</servlet-name>
         <url-pattern>/AddCustomerServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewCustomerServlet</servlet-name>
+        <url-pattern>/ViewCustomerServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateDeleteCustomerServlet</servlet-name>
+        <url-pattern>/UpdateDeleteCustomerServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddVehicleServlet</servlet-name>
+        <url-pattern>/AddVehicleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewVehicleServlet</servlet-name>
+        <url-pattern>/ViewVehicleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateDeleteVehicleServlet</servlet-name>
+        <url-pattern>/UpdateDeleteVehicleServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

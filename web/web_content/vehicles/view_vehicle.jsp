@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,14 +10,14 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Update Vehicle</title>
+  <title>View Vehicle</title>
 
   <!-- Custom fonts for this template-->
-  <link href="../../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="${pageContext.request.contextPath}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
-  <link href="../../css/sb-admin-2.css" rel="stylesheet">
+  <link href="${pageContext.request.contextPath}/css/sb-admin-2.css" rel="stylesheet">
 
 </head>
 
@@ -58,9 +59,9 @@
         <div id="collapseInvoice" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Options:</h6>
-            <a class="collapse-item" href="">Create New Invoice</a>
-            <a class="collapse-item" href="">View Invoice</a>
-            <a class="collapse-item" href="">Update Invoice</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/invoice/new_invoice.jsp">Create New Invoice</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/invoice/view_invoice.jsp">View Invoice</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/invoice/update_invoice.jsp">Update Invoice</a>
           </div>
         </div>
       </li>
@@ -76,10 +77,9 @@
         </a>
         <div id="collapseCustomers" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Options:</h6>
-            <a class="collapse-item" href="">Add New Customer</a>
-            <a class="collapse-item" href="">View Customer</a>
-            <a class="collapse-item" href="">Update Customer</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/customers/new_customer.jsp">Add New Customer</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/customers/view_customer.jsp">View Customer</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/customers/update_customer.jsp">Update Customer</a>
           </div>
         </div>
       </li>
@@ -96,9 +96,9 @@
         <div id="collapseDrivers" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Options:</h6>
-            <a class="collapse-item" href="">Add New Driver</a>
-            <a class="collapse-item" href="">View Driver</a>
-            <a class="collapse-item" href="">Update Driver</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/drivers/new_driver.jsp">Add New Driver</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/drivers/view_driver.jsp">View Driver</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/drivers/update_driver.jsp">Update Driver</a>
           </div>
         </div>
       </li>
@@ -115,9 +115,9 @@
         <div id="collapseVehicles" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Options:</h6>
-            <a class="collapse-item" href="">Add New Vehicle</a>
-            <a class="collapse-item" href="">View Vehicle</a>
-            <a class="collapse-item" href="">Update Vehicle</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/vehicles/new_vehicle.jsp">Add New Vehicle</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/vehicles/view_vehicle.jsp">View Vehicle</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/vehicles/update_vehicle.jsp">Update Vehicle</a>
           </div>
         </div>
       </li>
@@ -134,9 +134,9 @@
         <div id="collapseUsers" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Options:</h6>
-            <a class="collapse-item" href="">Add New User</a>
-            <a class="collapse-item" href="">View User</a>
-            <a class="collapse-item" href="">Update User</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/users/new_user.jsp">Add New User</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/users/view_user.jsp">View User</a>
+            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/users/update_user.jsp">Update User</a>
           </div>
         </div>
       </li>
@@ -166,7 +166,7 @@
             <i class="fa fa-bars"></i>
           </button>
 
-          <h1 class="h1 mb-2 text-gray-900"><a href="dashboard.html"><u>Car Rental Management System</u></a></h1>
+          <h1 class="h1 mb-2 text-gray-900"><a href="${pageContext.request.contextPath}/web_content/dashboard.jsp"><u>Vehicle Rental Management System</u></a></h1>
 
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
@@ -176,7 +176,7 @@
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 medium">Kavinda Jayasekara</span>
+                <span class="mr-2 d-none d-lg-inline text-gray-600 medium"><%= session.getAttribute("first_name")%></span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
             </li>
@@ -203,108 +203,55 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-          
+
           <!-- Page Heading -->
-          <h1 class="h3 mb-4 text-gray-700">Add New Vehicle</h1>
-          
-          <!-- Basic Card Example -->
-          <div class="card shadow mb-4">
+          <h1 class="h3 mb-4 text-gray-700">View Vehicle</h1>
+
+           <!-- DataTales Example -->
+           <div class="card shadow mb-4">
             <div class="card-header py-3">
-              <h6 class="m-0 font-weight-bold text-primary">Fill in the VIN to Update a Vehicle</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Vehicles</h6>
             </div>
             <div class="card-body">
-              <div class="form-group row">
-                <div class="col-sm-6 mb-3 mb-sm-0">
-                  <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Vehicle Identification Number</label>
-                  <input class="form-control" id="exampleFormControlInput1" type="text">
-                </div>
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="50%" cellspacing="0">
+                  <thead>
+                    <tr>
+                      <th>VIN</th>
+                      <th>Make</th>
+                      <th>Model</th>
+                      <th>YOR</th>
+                      <th>In Service From</th>
+                      <th>Category</th>
+                      <th>Rate Per Day</th>
+                      <th>Rate Per Week</th>
+                      <th>Rate Per Month</th>
+                      <th>Excess Mileage Over 80km Rate Per Day</th>
+                      <th>Rate Per Day (WD)</th>
+                      <th>Excess Mileage Over 80km Rate Per Day (WD)</th>
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr>
+                      <th>VIN</th>
+                      <th>Make</th>
+                      <th>Model</th>
+                      <th>YOR</th>
+                      <th>In Service From</th>
+                      <th>Category</th>
+                      <th>Rate Per Day</th>
+                      <th>Rate Per Week</th>
+                      <th>Rate Per Month</th>
+                      <th>Excess Mileage Over 80km Rate Per Day</th>
+                      <th>Rate Per Day (WD)</th>
+                      <th>Excess Mileage Over 80km Rate Per Day (WD)</th>
+                    </tr>
+                  </tfoot>
+                  <tbody>
+                    <jsp:include page="/ViewVehicleServlet" />
+                  </tbody>
+                </table>
               </div>
-              <form>
-                <div class="form-group row">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Make</label>
-                    <input class="form-control" id="exampleFormControlInput1" type="text">
-                  </div>
-                  <div class="col-sm-6">
-                    <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Model</label>
-                    <input class="form-control" id="exampleFormControlInput1" type="text">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Year or Registration</label>
-                    <input class="form-control" id="exampleFormControlInput1" type="text">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">In Service from</label>
-                    <input class="form-control" id="exampleFormControlInput1" type="date">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Category</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option>Select Category</option>
-                        <option>General</option>
-                        <option>Premium</option>
-                        <option>Luxury</option>
-                    </select>
-                  </div>
-                </div>
-                <hr>
-                <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-success">Without Driver</label>
-                <hr>
-                <div class="form-group row">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Rate Per Day</label>
-                    <input class="form-control" id="exampleFormControlInput1" type="text">
-                  </div>
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Rate Per Week</label>
-                    <input class="form-control" id="exampleFormControlInput1" type="text">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-sm-6">
-                    <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Rate Per Month</label>
-                    <input class="form-control" id="exampleFormControlInput1" type="text">
-                  </div>
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Excess Mileage Over 80km Per Day</label>
-                    <input class="form-control" id="exampleFormControlInput1" type="text">
-                  </div>
-                </div>
-                <hr>
-                <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-success">With Driver</label>
-                <hr>
-                <div class="form-group row">
-                  <div class="col-sm-6">
-                    <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Rate Per Day</label>
-                    <input class="form-control" id="exampleFormControlInput1" type="text">
-                  </div>
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Excess Mileage Over 80km Per Day</label>
-                    <input class="form-control" id="exampleFormControlInput1" type="text">
-                  </div>
-                </div>
-                <hr>
-                <div class="form-group row">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="submit" class="btn btn-success btn-user btn-block" value="Update Entry"> 
-                  </div>
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="submit" class="btn btn-danger btn-user btn-block" value="Delete Entry"> 
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-sm-6 mb-3 mb-sm-0">
-                    <input type="reset" class="btn btn-primary btn-user btn-block" value="Clear Form"> 
-                  </div> 
-                </div>                  
-              </form>
-
             </div>
           </div>
 
@@ -342,27 +289,27 @@
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
+            <span aria-hidden="true">Ã</span>
           </button>
         </div>
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="${pageContext.request.contextPath}">Logout</a>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="../../vendor/jquery/jquery.min.js"></script>
-  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="${pageContext.request.contextPath}/vendor/jquery/jquery.min.js"></script>
+  <script src="${pageContext.request.contextPath}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="../../vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="${pageContext.request.contextPath}/vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="../../js/sb-admin-2.min.js"></script>
+  <script src="${pageContext.request.contextPath}/js/sb-admin-2.min.js"></script>
 
 </body>
 
