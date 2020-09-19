@@ -78,9 +78,9 @@
                     <div id="collapseCustomers" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Options:</h6>
-                            <a class="collapse-item" href="">Add New Customer</a>
-                            <a class="collapse-item" href="">View Customer</a>
-                            <a class="collapse-item" href="">Update Customer</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/customers/new_customer.jsp">Add New Customer</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/customers/view_customer.jsp">View Customer</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/customers/update_customer.jsp">Update Customer</a>
                         </div>
                     </div>
                 </li>
@@ -97,9 +97,9 @@
                     <div id="collapseDrivers" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Options:</h6>
-                            <a class="collapse-item" href="">Add New Driver</a>
-                            <a class="collapse-item" href="">View Driver</a>
-                            <a class="collapse-item" href="">Update Driver</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/drivers/new_driver.jsp">Add New Driver</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/drivers/view_driver.jsp">View Driver</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/drivers/update_driver.jsp">Update Driver</a>
                         </div>
                     </div>
                 </li>
@@ -116,9 +116,9 @@
                     <div id="collapseVehicles" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                         <div class="bg-white py-2 collapse-inner rounded">
                             <h6 class="collapse-header">Options:</h6>
-                            <a class="collapse-item" href="">Add New Vehicle</a>
-                            <a class="collapse-item" href="">View Vehicle</a>
-                            <a class="collapse-item" href="">Update Vehicle</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/vehicles/new_vehicle.jsp">Add New Vehicle</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/vehicles/view_vehicle.jsp">View Vehicle</a>
+                            <a class="collapse-item" href="${pageContext.request.contextPath}/web_content/vehicles/update_vehicle.jsp">Update Vehicle</a>
                         </div>
                     </div>
                 </li>
