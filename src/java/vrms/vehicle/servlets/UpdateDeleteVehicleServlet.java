@@ -14,7 +14,7 @@ public class UpdateDeleteVehicleServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String action = request.getParameter("Update");
+        String action = request.getParameter("action");
         String vin = request.getParameter("vin");
         VehicleDAO dao = new VehicleDAO();
         VehicleBean vehicle = new VehicleBean();
@@ -35,7 +35,7 @@ public class UpdateDeleteVehicleServlet extends HttpServlet {
                 String new_make = request.getParameter("make");
                 String new_model = request.getParameter("model");
                 String new_yor = request.getParameter("yor");
-                String new_vin = request.getParameter("vin1");
+                //String new_vin = request.getParameter("vin1");
                 String new_serv_from = request.getParameter("serv_from");
                 String new_category = request.getParameter("category");
                 String new_rate_per_day_wod = request.getParameter("rate_per_day_wod");
@@ -56,9 +56,9 @@ public class UpdateDeleteVehicleServlet extends HttpServlet {
                 if (new_yor != null && !new_yor.isEmpty()) {
                     vehicle.setYor(new_yor);
                 }
-                if(new_vin != null && !new_vin.isEmpty()){
+                /*if(new_vin != null && !new_vin.isEmpty()){
                     vehicle.setVin(new_vin);
-                }
+                }*/
                 if (new_serv_from != null && !new_serv_from.isEmpty()) {
                     vehicle.setServ_from(new_serv_from);
                 }

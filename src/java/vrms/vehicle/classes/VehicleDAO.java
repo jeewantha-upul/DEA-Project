@@ -90,24 +90,25 @@ public class VehicleDAO {
             String url = "jdbc:mysql://localhost:3306/vrms_db";
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, "root", "");
-            PreparedStatement ps = con.prepareStatement("UPDATE vehicle SET make=?, model=?, yor=?, vin=?, serv_from=?, category=?, rate_per_day_wod=?, rate_per_week_wod=?, rate_per_month_wod=?, excess_milage_wod=?, rate_per_day_wd=?, excess_milage_wd=? WHERE vin=?");
+            PreparedStatement ps = con.prepareStatement("UPDATE vehicle SET make=?, model=?, yor=?, serv_from=?, category=?, rate_per_day_wod=?, rate_per_week_wod=?, rate_per_month_wod=?, excess_milage_wod=?, rate_per_day_wd=?, excess_milage_wd=? WHERE vin=?");
             ps.setString(1, vehicle.getMake());
             ps.setString(2, vehicle.getModel());
             ps.setString(3, vehicle.getYor());
-            ps.setString(4, vehicle.getVin());
-            ps.setString(5, vehicle.getServ_from());
-            ps.setString(6, vehicle.getCategory());
-            ps.setString(7, vehicle.getRate_per_day_wod());
-            ps.setString(8, vehicle.getRate_per_week_wod());
-            ps.setString(9, vehicle.getRate_per_month_wod());
-            ps.setString(10, vehicle.getExcess_milage_wod());
-            ps.setString(11, vehicle.getRate_per_day_wd());
-            ps.setString(12, vehicle.getExcess_milage_wd());
+            ps.setString(4, vehicle.getServ_from());
+            ps.setString(5, vehicle.getCategory());
+            ps.setString(6, vehicle.getRate_per_day_wod());
+            ps.setString(7, vehicle.getRate_per_week_wod());
+            ps.setString(8, vehicle.getRate_per_month_wod());
+            ps.setString(9, vehicle.getExcess_milage_wod());
+            ps.setString(10, vehicle.getRate_per_day_wd());
+            ps.setString(11, vehicle.getExcess_milage_wd());
+            ps.setString(12, vin);
             int rs = ps.executeUpdate();
             if (rs == 1) {
                 result = 1;
             }
-
+            ps.close();
+            con.close();
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(VehicleDAO.class.getName()).log(Level.SEVERE, null, ex);
         }
