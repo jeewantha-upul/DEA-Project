@@ -35,15 +35,15 @@ public class UpdateDeleteVehicleServlet extends HttpServlet {
                 String new_make = request.getParameter("make");
                 String new_model = request.getParameter("model");
                 String new_yor = request.getParameter("yor");
-                //String new_vin = request.getParameter("vin1");
+                String new_vin = request.getParameter("vin1");
                 String new_serv_from = request.getParameter("serv_from");
                 String new_category = request.getParameter("category");
                 String new_rate_per_day_wod = request.getParameter("rate_per_day_wod");
                 String new_rate_per_week_wod = request.getParameter("rate_per_week_wod");
                 String new_rate_per_month_wod = request.getParameter("rate_per_month_wod");
-                String new_excess_milage_wod = request.getParameter("excess_milage_wod");
+                String new_excess_mileage_wod = request.getParameter("excess_mileage_wod");
                 String new_rate_per_day_wd = request.getParameter("rate_per_day_wd");
-                String new_excess_milage_wd = request.getParameter("excess_milage_wd");
+                String new_excess_mileage_wd = request.getParameter("excess_mileage_wd");
 
                 dao.viewSpecific(vehicle, vin);
 
@@ -56,9 +56,9 @@ public class UpdateDeleteVehicleServlet extends HttpServlet {
                 if (new_yor != null && !new_yor.isEmpty()) {
                     vehicle.setYor(new_yor);
                 }
-                /*if(new_vin != null && !new_vin.isEmpty()){
+                if(new_vin != null && !new_vin.isEmpty()){
                     vehicle.setVin(new_vin);
-                }*/
+                }
                 if (new_serv_from != null && !new_serv_from.isEmpty()) {
                     vehicle.setServ_from(new_serv_from);
                 }
@@ -74,14 +74,14 @@ public class UpdateDeleteVehicleServlet extends HttpServlet {
                 if (new_rate_per_month_wod != null && !new_rate_per_month_wod.isEmpty()) {
                     vehicle.setRate_per_month_wod(new_rate_per_month_wod);
                 }
-                if (new_excess_milage_wod != null && !new_excess_milage_wod.isEmpty()) {
-                    vehicle.setExcess_milage_wod(new_excess_milage_wod);
+                if (new_excess_mileage_wod != null && !new_excess_mileage_wod.isEmpty()) {
+                    vehicle.setExcess_mileage_wd(new_excess_mileage_wd);
                 }
                 if (new_rate_per_day_wd != null && !new_rate_per_day_wd.isEmpty()) {
                     vehicle.setRate_per_day_wd(new_rate_per_day_wd);
                 }
-                if (new_excess_milage_wd != null && !new_excess_milage_wd.isEmpty()) {
-                    vehicle.setExcess_milage_wd(new_excess_milage_wd);
+                if (new_excess_mileage_wd != null && !new_excess_mileage_wd.isEmpty()) {
+                    vehicle.setExcess_mileage_wd(new_excess_mileage_wd);
                 }
 
                 if (dao.update(vehicle, vin) != 0) {

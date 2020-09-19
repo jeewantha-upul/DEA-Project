@@ -243,7 +243,8 @@
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Vehicle Identification Number</label>
                                             <input class="form-control" id="exampleFormControlInput1" type="text" name="vin1">
                                         </div>
-                                    </div>    
+                                    </div>
+                                    <hr>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">In Service from</label>
@@ -255,9 +256,9 @@
                                             <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Category</label>
                                             <select class="form-control" id="exampleFormControlSelect1" name="category">
                                                 <option value="null">None</option>
-                                                <option value="general">General</option>
-                                                <option value="premium">Premium</option>
-                                                <option value="luxury">Luxury</option>
+                                                <option value="General">General</option>
+                                                <option value="Premium">Premium</option>
+                                                <option value="Luxury">Luxury</option>
                                             </select>
                                         </div>
                                     </div>
@@ -281,7 +282,7 @@
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Excess Mileage Over 80km Per Day</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="excess_milage_wod">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="excess_mileage_wod">
                                         </div>
                                     </div>
                                     <hr>
@@ -294,7 +295,7 @@
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">*Excess Mileage Over 80km Per Day</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="excess_milage_wd">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="excess_mileage_wd">
                                         </div>
                                     </div>
                                     <hr>

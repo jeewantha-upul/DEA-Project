@@ -24,9 +24,9 @@ public class AddVehicleServlet extends HttpServlet {
         String rate_per_day_wod = request.getParameter("rate_per_day_wod");
         String rate_per_week_wod = request.getParameter("rate_per_week_wod");
         String rate_per_month_wod = request.getParameter("rate_per_month_wod");
-        String excess_milage_wod = request.getParameter("excess_milage_wod");
+        String excess_mileage_wod = request.getParameter("excess_mileage_wod");
         String rate_per_day_wd = request.getParameter("rate_per_day_wd");
-        String excess_milage_wd = request.getParameter("excess_milage_wd");
+        String excess_mileage_wd = request.getParameter("excess_mileage_wd");
         
         VehicleBean vehicle = new VehicleBean();
         
@@ -39,9 +39,9 @@ public class AddVehicleServlet extends HttpServlet {
         vehicle.setRate_per_day_wod(rate_per_day_wod);
         vehicle.setRate_per_week_wod(rate_per_week_wod);
         vehicle.setRate_per_month_wod(rate_per_month_wod);
-        vehicle.setExcess_milage_wod(excess_milage_wod);
+        vehicle.setExcess_mileage_wod(excess_mileage_wod);
         vehicle.setRate_per_day_wd(rate_per_day_wd);
-        vehicle.setExcess_milage_wd(excess_milage_wd);
+        vehicle.setExcess_mileage_wd(excess_mileage_wd);
         
         VehicleDAO dao = new VehicleDAO();
         

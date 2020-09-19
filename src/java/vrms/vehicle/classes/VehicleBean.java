@@ -11,9 +11,9 @@ public class VehicleBean {
     private String rate_per_day_wod;
     private String rate_per_week_wod;
     private String rate_per_month_wod;
-    private String excess_milage_wod;
+    private String excess_mileage_wod;
     private String rate_per_day_wd;
-    private String excess_milage_wd;
+    private String excess_mileage_wd;
 
     public String getMake() {
         return make;
@@ -87,12 +87,12 @@ public class VehicleBean {
         this.rate_per_month_wod = rate_per_month_wod;
     }
 
-    public String getExcess_milage_wod() {
-        return excess_milage_wod;
+    public String getExcess_mileage_wod() {
+        return excess_mileage_wod;
     }
 
-    public void setExcess_milage_wod(String excess_milage_wod) {
-        this.excess_milage_wod = excess_milage_wod;
+    public void setExcess_mileage_wod(String excess_mileage_wod) {
+        this.excess_mileage_wod = excess_mileage_wod;
     }
 
     public String getRate_per_day_wd() {
@@ -103,12 +103,12 @@ public class VehicleBean {
         this.rate_per_day_wd = rate_per_day_wd;
     }
 
-    public String getExcess_milage_wd() {
-        return excess_milage_wd;
+    public String getExcess_mileage_wd() {
+        return excess_mileage_wd;
     }
 
-    public void setExcess_milage_wd(String excess_milage_wd) {
-        this.excess_milage_wd = excess_milage_wd;
+    public void setExcess_mileage_wd(String excess_mileage_wd) {
+        this.excess_mileage_wd = excess_mileage_wd;
     }
 }
    
