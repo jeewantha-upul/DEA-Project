@@ -216,72 +216,7 @@
                             <div class="card-body">
 
                                 <form method="GET" action="${pageContext.request.contextPath}/SearchCustomerServlet">
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Customer NIC Number</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="nic">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label class="m-0 font-weight-bold text-success">Customer Availability:</label>
-                                        </div>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table table-bordered" id="dataTable" width="50%" cellspacing="0">
-                                                <thead>
-                                                    <tr>
-                                                        <th>First Name</th>
-                                                        <th>Last Name</th>                                                       
-                                                        <th>NIC</th>
-                                                        <th>Driving License Number</th>
-                                                        <th>Address</th>
-                                                        <th>Phone Number</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td><%=request.getAttribute("first_name")%></td>
-                                                        <td><%=request.getAttribute("last_name")%></td>
-                                                        <td><%=request.getAttribute("nic")%></td>
-                                                        <td><%=request.getAttribute("dl_no")%></td>
-                                                        <td><%=request.getAttribute("address")%></td>
-                                                        <td><%=request.getAttribute("phone_no")%></td>
-                                                    </tr>
-
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="submit" class="btn btn-success btn-user btn-block" name="action" value="Search"> 
-                                        </div>
-                                    </div>
-                                    <hr><hr>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Date</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="date">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Category</label>
-                                            <select class="form-control" id="exampleFormControlSelect1" name="category">
-                                                <option value="null">Select Category</option>
-                                                <option value="General">General</option>
-                                                <option value="Premium">Premium</option>
-                                                <option value="Luxury">Luxury</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="submit" class="btn btn-primary btn-user btn-block" name="action" value="Search Vehicles"> 
-                                        </div>
-                                    </div>
+                                    
                                 </form>
                             </div>
                         </div>

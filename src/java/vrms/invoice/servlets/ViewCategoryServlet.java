@@ -7,10 +7,12 @@ package vrms.invoice.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.System.out;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -23,25 +25,21 @@ public class ViewCategoryServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
         try {
-            response.setContentType("text/html");
-            PrintWriter out = response.getWriter();
+            String category = (String) request.getAttribute("category");
 
             InvoiceDAO dao = new InvoiceDAO();
-            ResultSet result = dao.viewCategory();
-            out.print("<select class=\"form-control\" id=\"exampleFormControlSelect1\" name=\"category\" onChange=\"location.href='web_content/invoice/new_invoice.jsp?option1='+this.value;\">");
-            out.print("<option value=\"null\">Select Category</option>");
-            if (result != null) {
-                while (result.next()) {
-                    out.print("<option value=" + result.getString("cat_id") + ">" + result.getString("type") + "</option>");
-                }
-            }else{
-                out.print("<option value='null'>Not Available</option>");
+            ResultSet result = dao.viewVehicles(category);
+            while (result.next()) {
+                out.print("<tr><td>" + result.getString("vin") + "</td><td>" + result.getString("make") + "</td><td>" + result.getString("model") + "</td><td>" + result.getString("yor") + "</td><td>" + result.getString("rate_per_day_wod") + "</td><td>" + result.getString("rate_per_week_wod") + "</td><td>" + result.getString("rate_per_month_wod") + "</td><td>" + result.getString("excess_mileage_wod") + "</td><td>" + result.getString("rate_per_day_wd") + "</td><td>" + result.getString("excess_mileage_wd") + "</td></tr>");
             }
-            out.print("</select>");
         } catch (SQLException ex) {
             Logger.getLogger(ViewCategoryServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
+
     }
 
 }
