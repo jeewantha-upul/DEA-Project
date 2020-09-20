@@ -211,11 +211,39 @@
                         <!-- Basic Card Example -->
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Fill in the Form to Create a New Invoice</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Customer Availability:</h6>
                             </div>
                             <div class="card-body">
-
-                                <form method="GET" action="${pageContext.request.contextPath}/SearchCustomerServlet">
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dataTable" width="50%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>NIC</th>
+                                                    <th>First Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>Phone Number</th>
+                                                    <th>Driving License Number</th>
+                                                    <th>Address</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>NIC</th>
+                                                    <th>First Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>Phone Number</th>
+                                                    <th>Driving License Number</th>
+                                                    <th>Address</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <jsp:include page="/Customer" />
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <form method="POST" action="${pageContext.request.contextPath}/SearchCustomerServlet">
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Customer NIC Number</label>
@@ -223,83 +251,19 @@
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary"></label>
-                                            <input type="submit" class="btn btn-primary btn-user btn-block" name="action" value="Search Customer"> 
+                                            <input type="submit" class="btn btn-success btn-user btn-block" name="action" value="Add Customer"> 
                                         </div>
-                                    </div>
-                                    <hr><hr>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Date</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="date">
-                                        </div>
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Reserved Until</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="date">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Category</label>
-                                            <select class="form-control" id="exampleFormControlSelect1" name="category">
-                                                <option value="null">Select Category</option>
-                                                <option value="General">General</option>
-                                                <option value="Premium">Premium</option>
-                                                <option value="Luxury">Luxury</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="submit" class="btn btn-primary btn-user btn-block" name="action" value="Search Vehicles"> 
-                                        </div>
-                                    </div>
-                                    <hr><hr>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Driver</label>
-                                            <input type="submit" class="btn btn-primary btn-user btn-block" name="action" value="Search Drivers"> 
-                                        </div>
-                                    </div>
-                                    <hr><hr>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-success">Selected Customer</label>
-                                        </div>
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-success">Selected Vehicle</label>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-success">Selected Driver</label>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <hr>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Starting Mileage</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Sub-Total</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Payments</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                <option>Yet To Pay</option>
-                                                <option>Paid</option>
-                                            </select>
-                                        </div>
+
                                     </div>
                                 </form>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="submit" class="btn btn-primary btn-user btn-block" name="action" value="Go Back" onclick="location.href = '<%=request.getHeader("referer")%>'">
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
                     </div>
                     <!-- /.container-fluid -->
 

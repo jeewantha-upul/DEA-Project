@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import vrms.invoice.classes.InvoiceDAO;
 
-public class ViewMakeServlet extends HttpServlet {
+public class Customer extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -23,19 +23,22 @@ public class ViewMakeServlet extends HttpServlet {
 
         try {
 
+            String nic = (String) request.getAttribute("nic");
+
             InvoiceDAO dao = new InvoiceDAO();
-            ResultSet result = dao.viewDrivers();
+            ResultSet result = dao.viewSpecificCustomer(nic);
+
             if (result.isBeforeFirst()) {
                 while (result.next()) {
-                    out.print("<tr><td>" + result.getString("dl_no") + "</td><td>" + result.getString("first_name") + "</td><td>" + result.getString("last_name") + "</td><td>" + result.getString("nic") + "</td><td>" + result.getString("phone_no") + "</td></tr>");
+                    out.print("<tr><td>" + result.getString("nic") + "</td><td>" + result.getString("first_name") + "</td><td>" + result.getString("last_name") + "</td><td>" + result.getString("phone_no") + "</td><td>" + result.getString("dl_no") + "</td><td>" + result.getString("address") + "</td></tr>");
                 }
             } else {
-                out.print("<tr><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>");
+                out.print("<tr><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>");
             }
+
         } catch (SQLException ex) {
-            Logger.getLogger(ViewMakeServlet.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Customer.class.getName()).log(Level.SEVERE, null, ex);
         }
 
     }
-
 }

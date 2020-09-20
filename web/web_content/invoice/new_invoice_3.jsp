@@ -214,10 +214,43 @@
                                 <h6 class="m-0 font-weight-bold text-primary">Fill in the Form to Create a New Invoice</h6>
                             </div>
                             <div class="card-body">
-
-                                <form method="GET" action="${pageContext.request.contextPath}/SearchCustomerServlet">
-                                    
-                                </form>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-success">Avaialable Vehicles</label>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered" id="dataTable" width="50%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Driving License No</th>
+                                                    <th>First Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>NIC No</th>
+                                                    <th>Phone Number</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Driving License No</th>
+                                                    <th>First Name</th>
+                                                    <th>Last Name</th>
+                                                    <th>NIC No</th>
+                                                    <th>Phone Number</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <jsp:include page="/ViewMakeServlet"/>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="submit" class="btn btn-primary btn-user btn-block" name="action" value="Go Back" onclick="location.href = '<%=request.getHeader("referer")%>'"> 
+                                    </div>
+                                </div>
                             </div>
                         </div>
 

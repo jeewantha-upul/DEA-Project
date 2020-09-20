@@ -72,6 +72,10 @@
         <servlet-name>UpdateDeleteVehicleServlet</servlet-name>
         <servlet-class>vrms.vehicle.servlets.UpdateDeleteVehicleServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Customer</servlet-name>
+        <servlet-class>vrms.invoice.servlets.Customer</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -143,6 +147,10 @@
     <servlet-mapping>
         <servlet-name>UpdateDeleteVehicleServlet</servlet-name>
         <url-pattern>/UpdateDeleteVehicleServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Customer</servlet-name>
+        <url-pattern>/Customer</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

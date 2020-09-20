@@ -7,12 +7,10 @@ package vrms.invoice.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import static java.lang.System.out;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -33,9 +31,14 @@ public class ViewCategoryServlet extends HttpServlet {
 
             InvoiceDAO dao = new InvoiceDAO();
             ResultSet result = dao.viewVehicles(category);
-            while (result.next()) {
+            if(result.isBeforeFirst()){
+                while (result.next()) {
                 out.print("<tr><td>" + result.getString("vin") + "</td><td>" + result.getString("make") + "</td><td>" + result.getString("model") + "</td><td>" + result.getString("yor") + "</td><td>" + result.getString("rate_per_day_wod") + "</td><td>" + result.getString("rate_per_week_wod") + "</td><td>" + result.getString("rate_per_month_wod") + "</td><td>" + result.getString("excess_mileage_wod") + "</td><td>" + result.getString("rate_per_day_wd") + "</td><td>" + result.getString("excess_mileage_wd") + "</td></tr>");
             }
+            }else{
+                out.print("<tr><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>");
+            }
+            
         } catch (SQLException ex) {
             Logger.getLogger(ViewCategoryServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
