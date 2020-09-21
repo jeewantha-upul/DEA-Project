@@ -246,6 +246,18 @@
                                         </table>
                                     </div>
                                 </div>
+                                <form method="POST" action="${pageContext.request.contextPath}/SearchCustomerServlet">
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Driving License Number</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="dl_no">
+                                        </div>
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary"></label>
+                                            <input type="submit" class="btn btn-success btn-user btn-block" name="action" value="Add Driver"> 
+                                        </div>
+                                    </div>
+                                </form>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="submit" class="btn btn-primary btn-user btn-block" name="action" value="Go Back" onclick="location.href = '<%=request.getHeader("referer")%>'"> 

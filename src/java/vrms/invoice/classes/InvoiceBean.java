@@ -14,6 +14,9 @@ public class InvoiceBean {
     private float end_mileage;
     private float total;
     private String status;
+    private String vin;
+    private String dl_no;
+    String first_name;
 
     public String getNic() {
         return nic;
@@ -109,6 +112,22 @@ public class InvoiceBean {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+    
+    public String getVin() {
+        return vin;
+    }
+
+    public void setVin(String vin) {
+        this.vin = vin;
+    }
+    
+    public String getDl_no() {
+        return dl_no;
+    }
+
+    public void setDl_no(String dl_no) {
+        this.dl_no = dl_no;
     }
    
 }
