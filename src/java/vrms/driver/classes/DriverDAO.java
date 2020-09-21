@@ -122,6 +122,7 @@ public class DriverDAO {
                 driver.setPhone_no(rs.getString("phone_no"));
                 driver.setEmail(rs.getString("email"));
                 driver.setNic(rs.getString("nic"));
+                driver.setDl_no(rs.getString("dl_no"));
                 driver.setDob(rs.getString("dob"));
                 driver.setAddress(rs.getString("address"));
                 ps.close();
