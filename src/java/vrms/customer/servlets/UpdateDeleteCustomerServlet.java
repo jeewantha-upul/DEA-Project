@@ -76,7 +76,7 @@ public class UpdateDeleteCustomerServlet extends HttpServlet {
                     customer.setDl_no(new_dl_no);
                 }
                 if (new_dob != null && !new_dob.isEmpty()) {
-                    customer.setDl_no(new_dob);
+                    customer.setDob(new_dob);
                 }
                 if (new_address != null && !new_address.isEmpty()) {
                     customer.setAddress(new_address);

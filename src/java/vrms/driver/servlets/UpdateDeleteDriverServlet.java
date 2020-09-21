@@ -23,7 +23,7 @@ public class UpdateDeleteDriverServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+
         String action = request.getParameter("action");
         String dl_no = request.getParameter("dl_no");
         DriverDAO dao = new DriverDAO();
@@ -72,7 +72,7 @@ public class UpdateDeleteDriverServlet extends HttpServlet {
                 if (new_nic != null && !new_nic.isEmpty()) {
                     driver.setNic(new_nic);
                 }
-                if(new_dl_no!= null && !new_dl_no.isEmpty()){
+                if (new_dl_no != null && !new_dl_no.isEmpty()) {
                     driver.setDl_no(new_dl_no);
                 }
                 if (new_dob != null && !new_dob.isEmpty()) {
@@ -93,7 +93,7 @@ public class UpdateDeleteDriverServlet extends HttpServlet {
                 } else {
                     response.setContentType("text/html");
                     out.println("<script type=\"text/javascript\">");
-                    out.println("window.alert('User could not be Updated! Try Again!');");
+                    out.println("window.alert('Driver could not be Updated! Try Again!');");
                     out.println("location='web_content/drivers/update_driver.jsp';");
                     out.println("</script>");
                 }
@@ -119,7 +119,7 @@ public class UpdateDeleteDriverServlet extends HttpServlet {
             }
 
         }
-        
+
     }
 
 }

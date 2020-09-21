@@ -228,7 +228,7 @@
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Year or Registration</label>
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Year of Registration</label>
                                             <input class="form-control" id="exampleFormControlInput1" type="text" name="yor">
                                         </div>
                                     </div>
@@ -249,9 +249,9 @@
                                             <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Category</label>
                                             <select class="form-control" id="exampleFormControlSelect1" name="category">
                                                 <option value="null">Select Category</option>
-                                                <option value="general">General</option>
-                                                <option value="premium">Premium</option>
-                                                <option value="luxury">Luxury</option>
+                                                <option value="General">General</option>
+                                                <option value="Premium">Premium</option>
+                                                <option value="Luxury">Luxury</option>
                                             </select>
                                         </div>
                                     </div>

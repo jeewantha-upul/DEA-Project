@@ -51,7 +51,7 @@ public class CustomerDAO {
             String url = "jdbc:mysql://localhost:3306/vrms_db";
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, "root", "");
-            PreparedStatement ps = con.prepareStatement("SELECT first_name,last_name,gender,phone_no,email,nic,dl_no,dob,address FROM customer");
+            PreparedStatement ps = con.prepareStatement("SELECT first_name,last_name,gender,phone_no,email,nic,dl_no,dob,address FROM customer ORDER BY first_name ASC");
             result = ps.executeQuery();
         } catch (ClassNotFoundException | SQLException ex) {
             Logger.getLogger(UserDAO.class.getName()).log(Level.SEVERE, null, ex);

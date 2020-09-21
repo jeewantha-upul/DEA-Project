@@ -235,7 +235,7 @@
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Year or Registration</label>
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Year of Registration</label>
                                             <input class="form-control" id="exampleFormControlInput1" type="text" name="yor">
                                         </div>
                                     </div>
@@ -249,7 +249,7 @@
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">In Service from</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="date" name="serve_from">
+                                            <input class="form-control" id="exampleFormControlInput1" type="date" name="serv_from">
                                         </div>
                                     </div>
                                     <div class="form-group row">
