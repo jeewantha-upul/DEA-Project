@@ -48,6 +48,8 @@ public class AddInvoiceServlet extends HttpServlet {
             }
             invoice.setStart_mileage(start_mileage);
             invoice.setTotal(total);
+            invoice.setEnd_mileage("Yet to Update");
+            invoice.setPayment_status("Yet to Pay");
         }
         
         InvoiceDAO dao = new InvoiceDAO();

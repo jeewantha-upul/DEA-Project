@@ -15,7 +15,7 @@ public class InvoiceDAO {
             String url = "jdbc:mysql://localhost:3306/vrms_db";
             Class.forName("com.mysql.jdbc.Driver");
             Connection con = DriverManager.getConnection(url, "root", "");
-            PreparedStatement ps = con.prepareStatement("INSERT INTO invoice (nic, first_name, last_name, phone_no, resv_date, resv_until, vin, driver_status, start_mileage, total) VALUES (?,?,?,?,?,?,?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("INSERT INTO invoice (nic, first_name, last_name, phone_no, resv_date, resv_until, vin, driver_status, start_mileage, end_mileage, total, status) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
             ps.setString(1, invoice.getNic());
             ps.setString(2, invoice.getFirst_name());
             ps.setString(3, invoice.getLast_name());
@@ -25,7 +25,9 @@ public class InvoiceDAO {
             ps.setString(7, invoice.getVin());
             ps.setString(8, invoice.getDriver_status());
             ps.setString(9, invoice.getStart_mileage());
-            ps.setString(10, invoice.getTotal());
+            ps.setString(10, invoice.getEnd_mileage());
+            ps.setString(11, invoice.getTotal());
+            ps.setString(12, invoice.getPayment_status());
             result = ps.executeUpdate();
             ps.close();
             con.close();
