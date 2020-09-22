@@ -8,10 +8,7 @@ public class InvoiceBean {
     private String phone_no;
     private String start_date;
     private String end_date;
-    private String category;
     private String vin;
-    private String make;
-    private String model;
     private String driver_status;
     private String start_mileage;
     private String end_mileage;
@@ -66,36 +63,12 @@ public class InvoiceBean {
         this.end_date = end_date;
     }
 
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
     public String getVin() {
         return vin;
     }
 
     public void setVin(String vin) {
         this.vin = vin;
-    }
-
-    public String getMake() {
-        return make;
-    }
-
-    public void setMake(String make) {
-        this.make = make;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
     }
 
     public String getDriver_status() {

@@ -215,7 +215,7 @@
                             </div>
                             <div class="card-body">
 
-                                <form method="GET" action="${pageContext.request.contextPath}/SearchCustomerServlet">
+                                <form method="POST" action="${pageContext.request.contextPath}/AddInvoiceServlet">
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">NIC Number</label>
@@ -242,22 +242,11 @@
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Date</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="date" name="date">
+                                            <input class="form-control" id="exampleFormControlInput1" type="date" name="start_date">
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Reserved Until</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="date">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Category</label>
-                                            <select class="form-control" id="exampleFormControlSelect1" name="category">
-                                                <option value="null">Select Category</option>
-                                                <option value="General">General</option>
-                                                <option value="Premium">Premium</option>
-                                                <option value="Luxury">Luxury</option>
-                                            </select>
+                                            <input class="form-control" id="exampleFormControlInput1" type="date" name="end_date">
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -266,23 +255,13 @@
                                             <input class="form-control" id="exampleFormControlInput1" type="text" name="vin">
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Make</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="make">
-                                        </div>
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Model</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="model">
-                                        </div>
-                                    </div>
                                     <hr><hr>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">With / Without Driver</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                <option>Without Driver</option>
-                                                <option>With Driver</option>
+                                            <select class="form-control" id="exampleFormControlSelect1" name="driver_status">
+                                                <option value="wod">Without Driver</option>
+                                                <option value="wd">With Driver</option>
                                             </select>
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">

@@ -21,18 +21,6 @@
         <servlet-class>vrms.user.servlets.LogOutServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>SearchCustomerServlet</servlet-name>
-        <servlet-class>vrms.invoice.servlets.SearchCustomerServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ViewCategoryServlet</servlet-name>
-        <servlet-class>vrms.invoice.servlets.ViewCategoryServlet</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ViewMakeServlet</servlet-name>
-        <servlet-class>vrms.invoice.servlets.ViewMakeServlet</servlet-class>
-    </servlet>
-    <servlet>
         <servlet-name>AddDriverServlet</servlet-name>
         <servlet-class>vrms.driver.servlets.AddDriverServlet</servlet-class>
     </servlet>
@@ -73,8 +61,8 @@
         <servlet-class>vrms.vehicle.servlets.UpdateDeleteVehicleServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>Customer</servlet-name>
-        <servlet-class>vrms.invoice.servlets.Customer</servlet-class>
+        <servlet-name>AddInvoiceServlet</servlet-name>
+        <servlet-class>vrms.invoice.servlets.AddInvoiceServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -95,18 +83,6 @@
     <servlet-mapping>
         <servlet-name>LogOutServlet</servlet-name>
         <url-pattern>/LogOutServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>SearchCustomerServlet</servlet-name>
-        <url-pattern>/SearchCustomerServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ViewCategoryServlet</servlet-name>
-        <url-pattern>/ViewCategoryServlet</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ViewMakeServlet</servlet-name>
-        <url-pattern>/ViewMakeServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>AddDriverServlet</servlet-name>
@@ -149,13 +125,12 @@
         <url-pattern>/UpdateDeleteVehicleServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>Customer</servlet-name>
-        <url-pattern>/Customer</url-pattern>
+        <servlet-name>AddInvoiceServlet</servlet-name>
+        <url-pattern>/AddInvoiceServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
-    
 </web-app>
