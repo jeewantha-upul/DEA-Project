@@ -100,4 +100,38 @@ public class InvoiceDAO {
         return result;
     }
 
+    public int delete(String invoice_id) {
+        int result = 0;
+        try {
+            String url = "jdbc:mysql://localhost:3306/vrms_db";
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection(url, "root", "");
+            PreparedStatement ps = con.prepareStatement("DELETE FROM invoice WHERE invoice_id=?");
+            ps.setString(1, invoice_id);
+            int rs = ps.executeUpdate();
+            if (rs == 1) {
+                result = 1;
+            }
+            ps.close();
+            con.close();
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(InvoiceDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return result;
+    }
+
+    public ResultSet view() {
+        ResultSet result = null;
+        try {
+            String url = "jdbc:mysql://localhost:3306/vrms_db";
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection con = DriverManager.getConnection(url, "root", "");
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM invoice");
+            result = ps.executeQuery();
+        } catch (ClassNotFoundException | SQLException ex) {
+            Logger.getLogger(InvoiceDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return result;
+    }
+
 }

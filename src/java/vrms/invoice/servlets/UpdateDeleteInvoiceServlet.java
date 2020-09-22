@@ -74,7 +74,7 @@ public class UpdateDeleteInvoiceServlet extends HttpServlet {
                 }
                 if (new_driver_status.equals("wd")) {
                     invoice.setDriver_status(new_dl_no);
-                } else if(new_driver_status.equals("wod")){
+                } else if (new_driver_status.equals("wod")) {
                     invoice.setDriver_status("Without Driver");
                 }
                 if (new_start_mileage != null && !new_start_mileage.isEmpty()) {
@@ -88,6 +88,22 @@ public class UpdateDeleteInvoiceServlet extends HttpServlet {
                 }
                 if (new_status != null && !new_status.isEmpty()) {
                     invoice.setPayment_status(new_status);
+                }
+
+                if (dao.update(invoice, invoice_id) != 0) {
+
+                    response.setContentType("text/html");
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("window.alert('Invoice Updated Successfully!');");
+                    out.println("location='web_content/invoice/update_invoice.jsp';");
+                    out.println("</script>");
+
+                } else {
+                    response.setContentType("text/html");
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("window.alert('Invoice could not be Updated! Try Again!');");
+                    out.println("location='web_content/invoice/update_invoice.jsp';");
+                    out.println("</script>");
                 }
 
             }
