@@ -288,7 +288,7 @@
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Payments</label>
-                                            <select class="form-control" id="exampleFormControlSelect1" name="payment_status">
+                                            <select class="form-control" id="exampleFormControlSelect1" name="pay_status">
                                                 <option value="Yet To Pay">Yet To Pay</option>
                                                 <option value="Paid">Paid</option>
                                             </select>
@@ -346,7 +346,7 @@
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">Ã</span>
+                            <span aria-hidden="true">×</span>
                         </button>
                     </div>
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>

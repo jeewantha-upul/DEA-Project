@@ -47,7 +47,7 @@ public class UpdateDeleteInvoiceServlet extends HttpServlet {
                 String new_start_mileage = request.getParameter("start_mileage");
                 String new_end_mileage = request.getParameter("end_mileage");
                 String new_total = request.getParameter("total");
-                String new_status = request.getParameter("status");
+                String new_pay_status = request.getParameter("pay_status");
 
                 dao.viewSpecific(invoice, invoice_id);
 
@@ -86,8 +86,8 @@ public class UpdateDeleteInvoiceServlet extends HttpServlet {
                 if (new_total != null && !new_total.isEmpty()) {
                     invoice.setTotal(new_total);
                 }
-                if (new_status != null && !new_status.isEmpty()) {
-                    invoice.setPayment_status(new_status);
+                if (new_pay_status != null && !new_pay_status.isEmpty()) {
+                    invoice.setPayment_status(new_pay_status);
                 }
 
                 if (dao.update(invoice, invoice_id) != 0) {
