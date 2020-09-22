@@ -266,6 +266,7 @@
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">With / Without Driver</label>
                                             <select class="form-control" id="exampleFormControlSelect1" name="driver_status">
+                                                <option value="null">No Change</option>
                                                 <option value="wod">Without Driver</option>
                                                 <option value="wd">With Driver</option>
                                             </select>
@@ -289,7 +290,7 @@
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Total</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text" disabled>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="total">
                                         </div>
                                     </div>
                                     <div class="form-group row">

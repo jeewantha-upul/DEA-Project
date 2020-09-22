@@ -35,6 +35,60 @@ public class UpdateDeleteInvoiceServlet extends HttpServlet {
 
         } else {
             if (action.equals("Update")) {
+                String new_nic = request.getParameter("nic");
+                String new_first_name = request.getParameter("first_name");
+                String new_last_name = request.getParameter("last_name");
+                String new_phone_no = request.getParameter("phone_no");
+                String new_start_date = request.getParameter("start_date");
+                String new_end_date = request.getParameter("end_date");
+                String new_vin = request.getParameter("vin");
+                String new_driver_status = request.getParameter("driver_status");
+                String new_dl_no = request.getParameter("dl_no");
+                String new_start_mileage = request.getParameter("start_mileage");
+                String new_end_mileage = request.getParameter("end_mileage");
+                String new_total = request.getParameter("total");
+                String new_status = request.getParameter("status");
+
+                dao.viewSpecific(invoice, invoice_id);
+
+                if (new_nic != null && !new_nic.isEmpty()) {
+                    invoice.setNic(new_nic);
+                }
+                if (new_first_name != null && !new_first_name.isEmpty()) {
+                    invoice.setFirst_name(new_first_name);
+                }
+                if (new_last_name != null && !new_last_name.isEmpty()) {
+                    invoice.setLast_name(new_last_name);
+                }
+                if (new_phone_no != null && !new_phone_no.isEmpty()) {
+                    invoice.setPhone_no(new_phone_no);
+                }
+                if (new_start_date != null && !new_start_date.isEmpty()) {
+                    invoice.setStart_date(new_start_date);
+                }
+                if (new_end_date != null && !new_end_date.isEmpty()) {
+                    invoice.setEnd_date(new_end_date);
+                }
+                if (new_vin != null && !new_vin.isEmpty()) {
+                    invoice.setVin(new_vin);
+                }
+                if (new_driver_status.equals("wd")) {
+                    invoice.setDriver_status(new_dl_no);
+                } else if(new_driver_status.equals("wod")){
+                    invoice.setDriver_status("Without Driver");
+                }
+                if (new_start_mileage != null && !new_start_mileage.isEmpty()) {
+                    invoice.setStart_mileage(new_start_mileage);
+                }
+                if (new_end_mileage != null && !new_end_mileage.isEmpty()) {
+                    invoice.setEnd_mileage(new_end_mileage);
+                }
+                if (new_total != null && !new_total.isEmpty()) {
+                    invoice.setTotal(new_total);
+                }
+                if (new_status != null && !new_status.isEmpty()) {
+                    invoice.setPayment_status(new_status);
+                }
 
             }
         }
