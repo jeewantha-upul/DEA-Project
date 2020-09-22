@@ -183,14 +183,6 @@
                             </li>
                             <li class="nav-item dropdown no-arrow">
                                 <a class="nav-link" href="#">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 medium">
-                                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                        Settings
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown no-arrow">
-                                <a class="nav-link" href="#">
                                     <span class="mr-2 d-none d-lg-inline text-gray-600 medium"  data-toggle="modal" data-target="#logoutModal">
                                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                         Logout
@@ -339,7 +331,7 @@
                     <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
+                        <a class="btn btn-primary" href="${pageContext.request.contextPath}/LogOutServlet">Logout</a>
                     </div>
                 </div>
             </div>
