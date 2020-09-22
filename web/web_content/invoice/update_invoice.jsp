@@ -215,7 +215,7 @@
                             </div>
                             <div class="card-body">
 
-                                <form>
+                                <form method="POST" action="${pageContext.request.contextPath}/UpdateDeleteInvoiceServlet">
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Invoice ID</label>
@@ -284,7 +284,7 @@
                                         </div>
                                         <div class="col-sm-6">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">End Mileage</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="end_mileage">
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -296,20 +296,25 @@
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Payments</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                <option>Yet To Pay</option>
-                                                <option>Paid</option>
+                                            <select class="form-control" id="exampleFormControlSelect1" name="payment_status">
+                                                <option value="Yet To Pay">Yet To Pay</option>
+                                                <option value="Paid">Paid</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="submit" class="btn btn-primary btn-user btn-block" value="Submit Entry"> 
+                                            <input type="submit" class="btn btn-success btn-user btn-block" name="action" value="Update"> 
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="reset" class="btn btn-info btn-user btn-block" value="Clear Form"> 
+                                            <input type="submit" class="btn btn-danger btn-user btn-block" name="action" value="Delete"> 
                                         </div>
-                                    </div>               
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="reset" class="btn btn-primary btn-user btn-block" value="Clear Form"> 
+                                        </div> 
+                                    </div>                 
                                 </form>
 
                             </div>

@@ -106,6 +106,24 @@ public class UpdateDeleteInvoiceServlet extends HttpServlet {
                     out.println("</script>");
                 }
 
+            } else if (action.equals("Delete")) {
+
+                if (dao.delete(invoice_id) != 0) {
+
+                    response.setContentType("text/html");
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("window.alert('Invoice Deleted Successfully!');");
+                    out.println("location='web_content/invoice/update_invoice.jsp';");
+                    out.println("</script>");
+
+                } else {
+                    response.setContentType("text/html");
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("window.alert('Something went wrong! Please Try Again!');");
+                    out.println("location='web_content/invoice/update_invoice.jsp';");
+                    out.println("</script>");
+                }
+
             }
         }
     }

@@ -65,7 +65,7 @@
         <servlet-class>vrms.invoice.servlets.AddInvoiceServlet</servlet-class>
     </servlet>
     <servlet>
-        <servlet-name>UpdateDeleteServlet</servlet-name>
+        <servlet-name>UpdateDeleteInvoiceServlet</servlet-name>
         <servlet-class>vrms.invoice.servlets.UpdateDeleteInvoiceServlet</servlet-class>
     </servlet>
     <servlet-mapping>
@@ -133,8 +133,8 @@
         <url-pattern>/AddInvoiceServlet</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>UpdateDeleteServlet</servlet-name>
-        <url-pattern>/UpdateDeleteServlet</url-pattern>
+        <servlet-name>UpdateDeleteInvoiceServlet</servlet-name>
+        <url-pattern>/UpdateDeleteInvoiceServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
