@@ -183,14 +183,6 @@
                             </li>
                             <li class="nav-item dropdown no-arrow">
                                 <a class="nav-link" href="#">
-                                    <span class="mr-2 d-none d-lg-inline text-gray-600 medium">
-                                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                        Settings
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="nav-item dropdown no-arrow">
-                                <a class="nav-link" href="#">
                                     <span class="mr-2 d-none d-lg-inline text-gray-600 medium"  data-toggle="modal" data-target="#logoutModal">
                                         <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                         Logout
@@ -283,7 +275,7 @@
                         <!-- DataTales Example -->
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Top Customers</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Latest Customers</h6>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
@@ -323,7 +315,7 @@
                         <!-- DataTales Example -->
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Top Vehicles</h6>
+                                <h6 class="m-0 font-weight-bold text-primary">Latest Vehicles</h6>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">

@@ -182,14 +182,6 @@
             </li>
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link" href="#">
-                <span class="mr-2 d-none d-lg-inline text-gray-600 medium">
-                  <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Settings
-                </span>
-              </a>
-            </li>
-            <li class="nav-item dropdown no-arrow">
-              <a class="nav-link" href="#">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 medium"  data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
@@ -289,7 +281,7 @@
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">Ã</span>
+            <span aria-hidden="true">×</span>
           </button>
         </div>
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
