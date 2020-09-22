@@ -68,6 +68,10 @@
         <servlet-name>UpdateDeleteInvoiceServlet</servlet-name>
         <servlet-class>vrms.invoice.servlets.UpdateDeleteInvoiceServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ViewInvoiceServlet</servlet-name>
+        <servlet-class>vrms.invoice.servlets.ViewInvoiceServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -135,6 +139,10 @@
     <servlet-mapping>
         <servlet-name>UpdateDeleteInvoiceServlet</servlet-name>
         <url-pattern>/UpdateDeleteInvoiceServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ViewInvoiceServlet</servlet-name>
+        <url-pattern>/ViewInvoiceServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

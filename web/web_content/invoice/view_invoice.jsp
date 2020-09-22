@@ -211,11 +211,13 @@
                                         <thead>
                                             <tr>
                                                 <th>Invoice No</th>
+                                                <th>NIC</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
-                                                <th>Model</th>
-                                                <th>Make</th>
+                                                <th>Phone No</th>
                                                 <th>VIN</th>
+                                                <th>Start Mileage</th>
+                                                <th>End Mileage</th>
                                                 <th>Driver</th>
                                                 <th>Reserved Date</th>
                                                 <th>Reserved Until</th>
@@ -226,11 +228,13 @@
                                         <tfoot>
                                             <tr>
                                                 <th>Invoice No</th>
+                                                <th>NIC</th>
                                                 <th>First Name</th>
                                                 <th>Last Name</th>
-                                                <th>Model</th>
-                                                <th>Make</th>
+                                                <th>Phone No</th>
                                                 <th>VIN</th>
+                                                <th>Start Mileage</th>
+                                                <th>End Mileage</th>
                                                 <th>Driver</th>
                                                 <th>Reserved Date</th>
                                                 <th>Reserved Until</th>
@@ -239,19 +243,7 @@
                                             </tr>
                                         </tfoot>
                                         <tbody>
-                                            <tr>
-                                                <td>1</td>
-                                                <td>Tharindu</td>
-                                                <td>KP</td>
-                                                <td>Suzuki</td>
-                                                <td>Swift</td>
-                                                <td>CBJ-1998</td>
-                                                <td>Santa Rajapaksha</td>
-                                                <td>2020/09/01</td>
-                                                <td>2020/09/02</td>
-                                                <td>4500.00</td>
-                                                <td>Paid</td>
-                                            </tr>
+                                            <jsp:include page="/ViewInvoiceServlet" />
                                         </tbody>
                                     </table>
                                 </div>
