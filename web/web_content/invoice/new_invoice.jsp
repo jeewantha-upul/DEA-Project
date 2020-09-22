@@ -218,19 +218,31 @@
                                 <form method="GET" action="${pageContext.request.contextPath}/SearchCustomerServlet">
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Customer NIC Number</label>
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">NIC Number</label>
                                             <input class="form-control" id="exampleFormControlInput1" type="text" name="nic">
                                         </div>
+                                    </div>
+                                    <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary"></label>
-                                            <input type="submit" class="btn btn-primary btn-user btn-block" name="action" value="Search Customer"> 
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">First Name</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="first_name">
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Last Name</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="last_name">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Phone Number</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="phone_no">
                                         </div>
                                     </div>
                                     <hr><hr>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Date</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="date">
+                                            <input class="form-control" id="exampleFormControlInput1" type="date" name="date">
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Reserved Until</label>
@@ -250,53 +262,54 @@
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <input type="submit" class="btn btn-primary btn-user btn-block" name="action" value="Search Vehicles"> 
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Vehicle Identification Number</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="vin">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Make</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="make">
+                                        </div>
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Model</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="model">
                                         </div>
                                     </div>
                                     <hr><hr>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Driver</label>
-                                            <input type="submit" class="btn btn-primary btn-user btn-block" name="action" value="Search Drivers"> 
-                                        </div>
-                                    </div>
-                                    <hr><hr>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-success">Selected Customer</label>
+                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">With / Without Driver</label>
+                                            <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>Without Driver</option>
+                                                <option>With Driver</option>
+                                            </select>
                                         </div>
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-success">Selected Vehicle</label>
+                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">If With Driver, Driver's License Number</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name='dl_no'>
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-success">Selected Driver</label>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <hr>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
                                             <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Starting Mileage</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text">
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="start_mileage">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Sub-Total</label>
-                                            <input class="form-control" id="exampleFormControlInput1" type="text" disabled>
+                                            <label for="exampleFormControlInput1" class="m-0 font-weight-bold text-primary">Sub - Total</label>
+                                            <input class="form-control" id="exampleFormControlInput1" type="text" name="total">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="exampleFormControlSelect1" class="m-0 font-weight-bold text-primary">Payments</label>
-                                            <select class="form-control" id="exampleFormControlSelect1">
-                                                <option>Yet To Pay</option>
-                                                <option>Paid</option>
-                                            </select>
+                                            <input type="submit" class="btn btn-primary btn-user btn-block" value="Submit Entry"> 
                                         </div>
-                                    </div>
+                                        <div class="col-sm-6 mb-3 mb-sm-0">
+                                            <input type="reset" class="btn btn-info btn-user btn-block" value="Clear Form"> 
+                                        </div>
+                                    </div> 
                                 </form>
                             </div>
                         </div>
