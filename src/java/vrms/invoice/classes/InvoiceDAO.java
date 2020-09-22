@@ -58,7 +58,7 @@ public class InvoiceDAO {
                 invoice.setStart_mileage(rs.getString("start_mileage"));
                 invoice.setEnd_mileage(rs.getString("end_mileage"));
                 invoice.setTotal(rs.getString("total"));
-                invoice.setPayment_status(rs.getString("status"));
+                invoice.setPayment_status(rs.getString("pay_status"));
                 ps.close();
                 con.close();
             }
